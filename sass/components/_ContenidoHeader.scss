@@ -1,0 +1,84 @@
+div.SeccionHeader {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    div.Header-Content {
+        width: 40%;
+        h1 {
+            margin: 0;
+            font-size: 50px;
+            letter-spacing: 15px;
+            color: $ColorMoradoOscuro;
+            @media (max-width: 1090px) {
+                letter-spacing: 0px;
+            }
+            @media(max-width: 850px) {
+                font-size: 40px;
+            }
+            @media (max-width: 450px) {
+                font-size: 40px;
+            }
+        }
+        p {
+            color: $ColorNegroOscuro2;
+            font-size: 14px;
+            @media(max-width: 850px) {
+                font-size: 17px;
+            }
+        }
+        span {
+            @media (max-width: 450px) {
+                display: none;
+            }
+        }
+        a {
+            @include Boton($ColorMoradoOscuro, $ColorBlanco, $ColorMorado);
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        @media (max-width:850px) {
+            width: 80%;
+            padding: 50px 0;
+        }
+    }
+    /* IMAGEN HEADER */
+    div.ImagenH {
+        overflow: hidden;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        /* FONDO MORADO IMAGEN COMIDA */
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -25%;
+            clip-path: circle(50% at 1% 50%);
+            background-color: $ColorMorado;
+            width: 70%;
+            height: 100%;
+        }
+        img {
+            width: 70%;
+            z-index: 2;
+        }
+        @media (max-width:850px) {
+            width: 60%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        @media(max-width:450px) {
+            width: 80%;
+        }
+        @media(max-width:360px) {
+            width: 90%;
+        }
+    }
+    @media (max-width:850px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}

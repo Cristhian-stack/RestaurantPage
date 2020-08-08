@@ -1,0 +1,69 @@
+div.AboutFlex {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    div.ImagenAbout {
+        width: 60%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -35%;
+            clip-path: circle(50% at 1% 50%);
+            background-color: $ColorAmarrilloPiel;
+            width: 80%;
+            height: 100%;
+            z-index: -1;
+            @media (max-width: 450px) {
+                right: -35%;
+            }
+        }
+        img {
+            width: 80%;
+            z-index: 2;
+        }
+        @media (max-width:450px) {
+            order: 2;
+            width: 80%;
+        }
+    }
+    div.TextAbout {
+        width: 40%;
+        h2 {
+            font-size: 50px;
+            margin: 0;
+            color: $ColorMoradoOscuro;
+            @media (max-width: 850px) {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: $ColorNegroOscuro2;
+            font-size: 14px;
+        }
+        span {
+            @media (max-width: 850px) {
+                display: none;
+            }
+        }
+        a.boton {
+            @include Boton($ColorMoradoOscuro, $ColorBlanco, $ColorMorado);
+            margin-top: 20px;
+            border-radius: 8px;
+            @media (max-width: 450px) {
+                display: none;
+            }
+        }
+        @media (max-width:450px) {
+            width: 80%;
+            text-align: center;
+        }
+    }
+    @media (max-width:450px) {
+        flex-direction: column;
+    }
+}

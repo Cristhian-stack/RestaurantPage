@@ -1,0 +1,28 @@
+/* FUENTE LETRA */
+
+$FontPoppins:'Poppins',
+sans-serif;
+
+/* COLOR */
+
+$ColorNegroOscuro1: #292828;
+$ColorNegroOscuro2: #474545;
+$ColorMoradoFondo: #e7e1fb;
+$ColorBlanco: #ffffff;
+$ColorMorado: #7136F9;
+$ColorMoradoOscuro: #320b8d;
+$ColorAmarrilloPiel:#f6f880;
+
+/* MIXINS */
+
+@mixin Boton($Fondo, $ColorText, $Hover) {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $Fondo;
+    border: none;
+    color: $ColorText;
+    transition: all .4s ease;
+    &:hover {
+        background-color: $Hover;
+    }
+}

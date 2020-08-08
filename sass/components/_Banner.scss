@@ -1,0 +1,49 @@
+div.Banner {
+    background-color: $ColorMoradoOscuro;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    div.BanerCaja {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div.BannerText {
+            color: $ColorBlanco;
+        }
+        @media (max-width:850px) {
+            flex-direction: column;
+        }
+    }
+    form {
+        display: flex;
+        input.InputText {
+            outline: none;
+            border: none;
+            padding: 8px 8px;
+            width: 400px;
+            @media (max-width: 850px) {
+                width: 300px;
+            }
+            @media (max-width: 450px) {
+                width: 200px;
+            }
+        }
+        input.InputBoton {
+            border: none;
+            outline: none;
+            background-color: $ColorMorado;
+            position: relative;
+            left: -10px;
+            cursor: pointer;
+            color: white;
+            padding: 0 15px;
+        }
+    }
+    @media (max-width:850px) {
+        margin-top: 180px;
+    }
+}
+
+footer {
+    text-align: center;
+}
